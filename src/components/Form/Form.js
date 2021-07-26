@@ -61,9 +61,9 @@ const Form = ({ currentId, setCurrentId }) => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">
+        {/* <Typography variant="h6">
           {currentId ? `Editing "${post.title}"` : "Creating a Memory"}
-        </Typography>
+        </Typography> */}
         <TextField
           name="title"
           variant="outlined"
@@ -75,7 +75,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <TextField
           name="message"
           variant="outlined"
-          label="Message"
+          label="What's the news for today..?"
           fullWidth
           multiline
           rows={4}
@@ -96,7 +96,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <Button
           className={classes.buttonSubmit}
           variant="contained"
-          color="primary"
+          style={{ backgroundColor: "#20639B", color: "white" }}
           size="large"
           type="submit"
           fullWidth
@@ -105,7 +105,7 @@ const Form = ({ currentId, setCurrentId }) => {
         </Button>
         <Button
           variant="contained"
-          color="secondary"
+          style={{ backgroundColor: "red", color: "white" }}
           size="small"
           onClick={clear}
           fullWidth

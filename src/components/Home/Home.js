@@ -5,6 +5,7 @@ import {
   Grid,
   Button,
   Dialog,
+  DialogTitle,
   DialogContent,
 } from "@material-ui/core";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
@@ -33,44 +34,64 @@ const Home = () => {
   };
 
   return (
-    <Grow in>
-      <Container maxwidth="xl">
-        <Grid
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-          container
-          justify="space-between"
-          alignItems="stretch"
-          spacing={3}
-        >
-          <Grid item xs={12} sm={7}>
-            <Posts setCurrentId={setCurrentId} />
+    <>
+      <Grow in>
+        <Container maxwidth="xl">
+          <Grid
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            container
+            justify="space-between"
+            alignItems="stretch"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={7}>
+              <Posts setCurrentId={setCurrentId} />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            {/* <Form currentId={currentId} setCurrentId={setCurrentId} /> */}
-            <Button onClick={handleClickOpen}>
-              <AddCircleIcon
-                style={{ transform: "scale(1.8)" }}
-                fontSize="large"
-              />
-            </Button>
-          </Grid>
-        </Grid>
 
-        <Dialog open={openPopup}>
-          {/* <DialogTitle>Create Yout</DialogTitle> */}
-          <DialogContent>
-            <Button onClick={handleClickClose}>
-              <HighlightOffIcon />
-            </Button>
-            <Form currentId={currentId} setCurrentId={setCurrentId} />
-          </DialogContent>
-        </Dialog>
-      </Container>
-    </Grow>
+          <Dialog open={openPopup}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "10px 10px 0 10px",
+              }}
+            >
+              <DialogTitle>
+                <p style={{ fontWeight: "bold", margin: "0" }}> New Post </p>
+              </DialogTitle>
+              <Button onClick={handleClickClose}>
+                <HighlightOffIcon style={{ color: "red" }} />
+              </Button>
+            </div>
+
+            <DialogContent>
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </DialogContent>
+          </Dialog>
+        </Container>
+      </Grow>
+
+      {/* <Form currentId={currentId} setCurrentId={setCurrentId} /> */}
+      <Button
+        onClick={handleClickOpen}
+        style={{
+          position: "fixed",
+          marginBottom: "30px",
+          marginLeft: "30px",
+          bottom: "0",
+        }}
+      >
+        <AddCircleIcon
+          style={{ color: "#20639B", transform: "scale(1.8)" }}
+          fontSize="large"
+        />
+      </Button>
+    </>
   );
 };
 

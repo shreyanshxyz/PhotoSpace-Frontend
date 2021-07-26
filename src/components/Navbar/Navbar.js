@@ -69,7 +69,7 @@ const Navbar = () => {
             style={{
               borderRadius: "0",
               color: "white",
-              backgroundColor: "black",
+              backgroundColor: "#20639B",
             }}
           >
             Sign In

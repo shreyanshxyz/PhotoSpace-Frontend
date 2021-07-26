@@ -125,7 +125,7 @@ const SignUp = () => {
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            style={{ color: "white", backgroundColor: "#20639B" }}
             className={classes.submit}
           >
             {isSignup ? "Sign Up" : "Sign In"}
@@ -135,7 +135,7 @@ const SignUp = () => {
             render={(renderProps) => (
               <Button
                 className={classes.googleButton}
-                color="primary"
+                style={{ backgroundColor: "white", color: "#EA4335" }}
                 fullWidth
                 onClick={renderProps.onClick}
                 disabled={renderProps.disabled}

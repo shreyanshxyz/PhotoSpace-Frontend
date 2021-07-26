@@ -29,9 +29,7 @@ const Post = ({ post, setCurrentId }) => {
         <>
           <ThumbUpAltIcon fontSize="small" />
           &nbsp;
-          {post.likes.length > 2
-            ? `You and ${post.likes.length - 1} others`
-            : `${post.likes.length} like${post.likes.length > 1 ? "s" : ""}`}
+          {post.likes.length}
         </>
       ) : (
         <>
@@ -70,6 +68,7 @@ const Post = ({ post, setCurrentId }) => {
         gutterBottom
         variant="h5"
         component="h2"
+        style={{ paddingTop: "10px" }}
       >
         {post.title}
       </Typography>
@@ -94,7 +93,7 @@ const Post = ({ post, setCurrentId }) => {
             color="secondary"
             onClick={() => dispatch(deletePost(post._id))}
           >
-            <DeleteIcon fontSize="small" /> Delete
+            <DeleteIcon fontSize="small" />
           </Button>
         )}
       </CardActions>
