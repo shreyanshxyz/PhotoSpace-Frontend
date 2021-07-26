@@ -37,11 +37,11 @@ and uploaded to the database as an image storage.
 
 This repository is for the front-end. The front-end is hosted on Netlify.
 
-![PhotoSpace](https://i.imgur.com/c1IQNAg.png)
+![PhotoSpace](https://i.imgur.com/c1IQNAg.png?1)
 
 ### Auuthentication Page Features 
 
-![Login](https://i.imgur.com/5WmlimP.png)
+![Login](https://i.imgur.com/5WmlimP.png?2)
 
 ### Back End
 
